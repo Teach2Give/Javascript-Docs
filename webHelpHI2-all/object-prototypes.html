@@ -1,0 +1,125 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US" data-preset="contrast" data-primary-color="#307FFF"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="robots" content="noindex"><meta name="built-on" content="2024-08-27T10:57:06.8980591"><title>Object Prototypes | Help Instance</title><script type="application/json" id="virtual-toc-data">[{"id":"1-what-is-a-prototype","level":0,"title":"1. What is a Prototype?","anchor":"#1-what-is-a-prototype"},{"id":"2-prototypes-and-constructor-functions","level":0,"title":"2. Prototypes and Constructor Functions","anchor":"#2-prototypes-and-constructor-functions"},{"id":"3-prototypes-in-es6-classes","level":0,"title":"3. Prototypes in ES6 Classes","anchor":"#3-prototypes-in-es6-classes"},{"id":"4-object-create","level":0,"title":"4. Object.create()","anchor":"#4-object-create"},{"id":"5-property-lookup-and-prototypes","level":0,"title":"5. Property Lookup and Prototypes","anchor":"#5-property-lookup-and-prototypes"},{"id":"6-modifying-prototypes","level":0,"title":"6. Modifying Prototypes","anchor":"#6-modifying-prototypes"},{"id":"7-prototypes-and-inheritance","level":0,"title":"7. Prototypes and Inheritance","anchor":"#7-prototypes-and-inheritance"},{"id":"8-prototype-chain-and-object-methods","level":0,"title":"8. Prototype Chain and Object Methods","anchor":"#8-prototype-chain-and-object-methods"}]</script><script type="application/json" id="topic-shortcuts"></script><link href="https://resources.jetbrains.com/writerside/apidoc/6.10.0-b408/app.css" rel="stylesheet"><meta name="msapplication-TileColor" content="#000000"><link rel="apple-touch-icon" sizes="180x180" href="https://jetbrains.com/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="https://jetbrains.com/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="https://jetbrains.com/favicon-16x16.png"><meta name="msapplication-TileImage" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-144x144.png"><meta name="msapplication-square70x70logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-70x70.png"><meta name="msapplication-square150x150logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-150x150.png"><meta name="msapplication-wide310x150logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-310x150.png"><meta name="msapplication-square310x310logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-310x310.png"><meta name="image" content=""><!-- Open Graph --><meta property="og:title" content="Object Prototypes | Help Instance"><meta property="og:description" content=""><meta property="og:image" content=""><meta property="og:site_name" content="Help Instance Help"><meta property="og:type" content="website"><meta property="og:locale" content="en_US"><meta property="og:url" content="writerside-documentation/object-prototypes.html"><!-- End Open Graph --><!-- Twitter Card --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content=""><meta name="twitter:title" content="Object Prototypes | Help Instance"><meta name="twitter:description" content=""><meta name="twitter:creator" content=""><meta name="twitter:image:src" content=""><!-- End Twitter Card --><!-- Schema.org WebPage --><script type="application/ld+json">{
+    "@context": "http://schema.org",
+    "@type": "WebPage",
+    "@id": "writerside-documentation/object-prototypes.html#webpage",
+    "url": "writerside-documentation/object-prototypes.html",
+    "name": "Object Prototypes | Help Instance",
+    "description": "",
+    "image": "",
+    "inLanguage":"en-US"
+}</script><!-- End Schema.org --><!-- Schema.org WebSite --><script type="application/ld+json">{
+    "@type": "WebSite",
+    "@id": "writerside-documentation/#website",
+    "url": "writerside-documentation/",
+    "name": "Help Instance Help"
+}</script><!-- End Schema.org --></head><body data-id="Object-Prototypes" data-main-title="Object Prototypes" data-article-props="{&quot;seeAlsoStyle&quot;:&quot;links&quot;}" data-template="article" data-breadcrumbs="Introduction.md|Javascript Documentation///Javascript-Objects.md|Javascript Objects"><div class="wrapper"><main class="panel _main"><header class="panel__header"><div class="container"><h3>Help Instance  Help</h3><div class="panel-trigger"></div></div></header><section class="panel__content"><div class="container"><article class="article" data-shortcut-switcher="inactive"><h1 data-toc="Object-Prototypes" id="Object-Prototypes.md">Object Prototypes</h1><section class="chapter"><h2 id="1-what-is-a-prototype" data-toc="1-what-is-a-prototype">1. What is a Prototype?</h2><p id="z6j5yti_11">In JavaScript, every object has a hidden internal property called <span class="control" id="z6j5yti_12">proto</span>, which refers to another object known as its prototype. The prototype itself can have a prototype, forming a chain of objects. This chain is called the prototype chain and is used to look up properties and methods.</p></section><section class="chapter"><h2 id="2-prototypes-and-constructor-functions" data-toc="2-prototypes-and-constructor-functions">2. Prototypes and Constructor Functions</h2><p id="z6j5yti_13">Constructor functions are used to create multiple instances of objects with similar properties and methods. Each constructor function has a prototype property. When you create an object using this constructor function, the object inherits properties and methods from the constructor&rsquo;s prototype.</p><p id="z6j5yti_14">Example with Constructor Function:</p><div class="code-block" data-lang="javascript">
+function Car(make, model) {
+this.make = make;
+this.model = model;
+}
+
+// Adding a method to the prototype of Car
+Car.prototype.startEngine = function() {
+console.log('Engine started');
+};
+
+// Creating an instance of Car
+var myCar = new Car('Toyota', 'Camry');
+
+console.log(myCar.make); // Toyota
+console.log(myCar.model); // Camry
+myCar.startEngine(); // Engine started
+</div><p id="z6j5yti_16">In this example:</p><ul class="list _bullet" id="z6j5yti_17"><li class="list__item" id="z6j5yti_18"><p>Car.prototype is an object that has a method startEngine.</p></li><li class="list__item" id="z6j5yti_19"><p>myCar inherits startEngine from Car.prototype.</p></li></ul></section><section class="chapter"><h2 id="3-prototypes-in-es6-classes" data-toc="3-prototypes-in-es6-classes">3. Prototypes in ES6 Classes</h2><p id="z6j5yti_20">With ES6 classes, you can define prototypes using a class-based syntax, which is syntactic sugar over JavaScript's prototype-based inheritance.</p><p id="z6j5yti_21">Example with ES6 Class:</p><div class="code-block" data-lang="javascript">
+class Car {
+constructor(make, model) {
+this.make = make;
+this.model = model;
+}
+
+startEngine() {
+console.log('Engine started');
+}
+}
+
+let myCar = new Car('Toyota', 'Camry');
+
+console.log(myCar.make); // Toyota
+console.log(myCar.model); // Camry
+myCar.startEngine(); // Engine started
+</div><p id="z6j5yti_23">In this example:</p><ul class="list _bullet" id="z6j5yti_24"><li class="list__item" id="z6j5yti_25"><p>Car class has a startEngine method defined directly in its prototype.</p></li><li class="list__item" id="z6j5yti_26"><p>Instances created from Car inherit startEngine from the Car class&rsquo;s prototype.</p></li></ul></section><section class="chapter"><h2 id="4-object-create" data-toc="4-object-create">4. Object.create()</h2><p id="z6j5yti_27">Object.create() is a method that creates a new object with a specified prototype object. This method allows you to create an object with a custom prototype.</p><p id="z6j5yti_28">Example with Object.create():</p><div class="code-block" data-lang="javascript">
+let animal = {
+eat() {
+console.log('Eating');
+}
+};
+
+let dog = Object.create(animal);
+dog.bark = function() {
+console.log('Barking');
+};
+
+dog.eat(); // Eating (inherited from animal)
+dog.bark(); // Barking (own method)
+</div><p id="z6j5yti_30">In this example:</p><ul class="list _bullet" id="z6j5yti_31"><li class="list__item" id="z6j5yti_32"><p>dog inherits the eat method from animal.</p></li><li class="list__item" id="z6j5yti_33"><p>dog has its own method bark.</p></li></ul></section><section class="chapter"><h2 id="5-property-lookup-and-prototypes" data-toc="5-property-lookup-and-prototypes">5. Property Lookup and Prototypes</h2><p id="z6j5yti_34">When you try to access a property on an object, JavaScript first looks for that property on the object itself. If it&rsquo;s not found, JavaScript looks up the prototype chain until it finds the property or reaches the end of the chain (where <span class="control" id="z6j5yti_37">proto</span> is null).</p><p id="z6j5yti_35">Example of Property Lookup:</p><div class="code-block" data-lang="javascript">
+function Animal() {
+this.type = 'Unknown';
+}
+
+Animal.prototype.sound = 'Generic sound';
+
+let dog = new Animal();
+dog.type = 'Dog';
+
+console.log(dog.type); // Dog (found on the object itself)
+console.log(dog.sound); // Generic sound (inherited from Animal.prototype)
+</div></section><section class="chapter"><h2 id="6-modifying-prototypes" data-toc="6-modifying-prototypes">6. Modifying Prototypes</h2><p id="z6j5yti_38">You can add or modify properties and methods on an object's prototype at any time, and those changes will be reflected in all objects inheriting from that prototype.</p><p id="z6j5yti_39">Example of Modifying Prototypes:</p><div class="code-block" data-lang="javascript">
+function Animal(name) {
+this.name = name;
+}
+
+Animal.prototype.sayHello = function() {
+console.log(`Hello, I'm ${this.name}`);
+};
+
+let cat = new Animal('Whiskers');
+cat.sayHello(); // Hello, I'm Whiskers
+
+// Modifying prototype
+Animal.prototype.sayHello = function() {
+console.log(`Hi, I'm ${this.name}`);
+};
+
+let dog = new Animal('Rover');
+cat.sayHello(); // Hi, I'm Whiskers
+dog.sayHello(); // Hi, I'm Rover
+</div></section><section class="chapter"><h2 id="7-prototypes-and-inheritance" data-toc="7-prototypes-and-inheritance">7. Prototypes and Inheritance</h2><p id="z6j5yti_41">Prototypes are fundamental to JavaScript&rsquo;s inheritance model. You can create inheritance hierarchies using prototypes. For example, if you have a base class Animal and a derived class Dog, you can set up inheritance so that Dog inherits from Animal.</p><p id="z6j5yti_42">Example of Prototypal Inheritance:</p><div class="code-block" data-lang="javascript">
+function Animal(name) {
+this.name = name;
+}
+
+Animal.prototype.makeSound = function() {
+console.log('Some generic sound');
+};
+
+function Dog(name, breed) {
+Animal.call(this, name); // Call Animal constructor
+this.breed = breed;
+}
+
+// Set up inheritance
+Dog.prototype = Object.create(Animal.prototype);
+Dog.prototype.constructor = Dog;
+
+Dog.prototype.bark = function() {
+console.log('Woof');
+};
+
+let myDog = new Dog('Buddy', 'Golden Retriever');
+myDog.makeSound(); // Some generic sound (inherited from Animal)
+myDog.bark(); // Woof (own method)
+</div><p id="z6j5yti_44">In this example:</p><ul class="list _bullet" id="z6j5yti_45"><li class="list__item" id="z6j5yti_46"><p>Dog inherits from Animal through the prototype chain.</p></li><li class="list__item" id="z6j5yti_47"><p>Dog has its own method bark and inherits makeSound from Animal.</p></li></ul></section><section class="chapter"><h2 id="8-prototype-chain-and-object-methods" data-toc="8-prototype-chain-and-object-methods">8. Prototype Chain and Object Methods</h2><p id="z6j5yti_48">The prototype chain is used when JavaScript looks for methods and properties. Some built-in methods like toString and hasOwnProperty are inherited from Object.prototype, which is the root prototype.</p><p id="z6j5yti_49">Example:</p><div class="code-block" data-lang="javascript">
+let obj = {};
+console.log(obj.toString()); // [object Object] (inherited from Object.prototype)
+console.log(obj.hasOwnProperty('toString')); // false (toString is inherited, not an own property)
+</div><p id="z6j5yti_51">Summary</p><ul class="list _bullet" id="z6j5yti_52"><li class="list__item" id="z6j5yti_53"><p>Prototype: An object that is used as a fallback source for properties and methods.</p></li><li class="list__item" id="z6j5yti_54"><p>Prototype Chain: The chain of prototypes used to look up properties.</p></li><li class="list__item" id="z6j5yti_55"><p>Constructor Function and ES6 Classes: Mechanisms to create objects with shared methods through prototypes.</p></li><li class="list__item" id="z6j5yti_56"><p>Object.create(): Creates a new object with a specified prototype.</p></li><li class="list__item" id="z6j5yti_57"><p>Property Lookup: JavaScript first checks the object itself and then the prototype chain.</p></li><li class="list__item" id="z6j5yti_58"><p>Inheritance: Objects can inherit properties and methods through prototypes.</p></li></ul></section><div class="last-modified">Last modified: 27 August 2024</div><div data-feedback-placeholder="true"></div><div class="navigation-links _bottom"><a href="javascript-object-creation-patterns.html" class="navigation-links__prev">Javascript Object Creation Patterns</a><a href="json-objects.html" class="navigation-links__next">JSON Objects</a></div></article><div id="disqus_thread"></div></div></section></main></div><script src="https://resources.jetbrains.com/writerside/apidoc/6.10.0-b408/app.js"></script></body></html>

@@ -1,5 +1,4 @@
 # Javascript Documentation
-## By Alamin Juma - Technical Trainer Teach2Give
 
 # Introduction to JavaScript (JS)
 

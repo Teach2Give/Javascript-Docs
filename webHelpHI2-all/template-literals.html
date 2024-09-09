@@ -1,0 +1,97 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US" data-preset="contrast" data-primary-color="#307FFF"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="robots" content="noindex"><meta name="built-on" content="2024-08-27T10:57:06.9216859"><title>Template Literals | Help Instance</title><script type="application/json" id="virtual-toc-data">[{"id":"overview","level":0,"title":"Overview","anchor":"#overview"},{"id":"basic-syntax","level":0,"title":"Basic Syntax","anchor":"#basic-syntax"},{"id":"template-literals-es6","level":0,"title":"Template Literals (ES6)","anchor":"#template-literals-es6"}]</script><script type="application/json" id="topic-shortcuts"></script><link href="https://resources.jetbrains.com/writerside/apidoc/6.10.0-b408/app.css" rel="stylesheet"><meta name="msapplication-TileColor" content="#000000"><link rel="apple-touch-icon" sizes="180x180" href="https://jetbrains.com/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="https://jetbrains.com/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="https://jetbrains.com/favicon-16x16.png"><meta name="msapplication-TileImage" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-144x144.png"><meta name="msapplication-square70x70logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-70x70.png"><meta name="msapplication-square150x150logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-150x150.png"><meta name="msapplication-wide310x150logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-310x150.png"><meta name="msapplication-square310x310logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-310x310.png"><meta name="image" content=""><!-- Open Graph --><meta property="og:title" content="Template Literals | Help Instance"><meta property="og:description" content=""><meta property="og:image" content=""><meta property="og:site_name" content="Help Instance Help"><meta property="og:type" content="website"><meta property="og:locale" content="en_US"><meta property="og:url" content="writerside-documentation/template-literals.html"><!-- End Open Graph --><!-- Twitter Card --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content=""><meta name="twitter:title" content="Template Literals | Help Instance"><meta name="twitter:description" content=""><meta name="twitter:creator" content=""><meta name="twitter:image:src" content=""><!-- End Twitter Card --><!-- Schema.org WebPage --><script type="application/ld+json">{
+    "@context": "http://schema.org",
+    "@type": "WebPage",
+    "@id": "writerside-documentation/template-literals.html#webpage",
+    "url": "writerside-documentation/template-literals.html",
+    "name": "Template Literals | Help Instance",
+    "description": "",
+    "image": "",
+    "inLanguage":"en-US"
+}</script><!-- End Schema.org --><!-- Schema.org WebSite --><script type="application/ld+json">{
+    "@type": "WebSite",
+    "@id": "writerside-documentation/#website",
+    "url": "writerside-documentation/",
+    "name": "Help Instance Help"
+}</script><!-- End Schema.org --></head><body data-id="Template-Literals" data-main-title="Template Literals" data-article-props="{&quot;seeAlsoStyle&quot;:&quot;links&quot;}" data-template="article" data-breadcrumbs="Introduction.md|Javascript Documentation///ES6.md|Introduction to ES6 (ECMAScript 2015)"><div class="wrapper"><main class="panel _main"><header class="panel__header"><div class="container"><h3>Help Instance  Help</h3><div class="panel-trigger"></div></div></header><section class="panel__content"><div class="container"><article class="article" data-shortcut-switcher="inactive"><h1 data-toc="Template-Literals" id="Template-Literals.md">Template Literals</h1><section class="chapter"><h2 id="overview" data-toc="overview">Overview</h2><p id="-s9epte_6">Template literals, enclosed by backticks (<code class="code" id="-s9epte_7">`</code>), provide a more flexible and readable way to work with strings. They support multi-line strings and string interpolation, making it easier to include variables and expressions within strings.</p></section><section class="chapter"><h2 id="basic-syntax" data-toc="basic-syntax">Basic Syntax</h2><p id="-s9epte_8"><span class="control" id="-s9epte_10">Traditional String Concatenation (Before ES6):</span></p><div class="code-block" data-lang="javascript">
+const fname = &quot;Dan&quot;;
+const sname = &quot;Kitheka&quot;;
+console.log(&quot;Hello &quot; + fname + &quot; &quot; + sname); // Output: Hello Dan Kitheka
+
+</div></section><section class="chapter"><h2 id="template-literals-es6" data-toc="template-literals-es6">Template Literals (ES6)</h2><div class="code-block" data-lang="javascript">
+const fname = &quot;Dan&quot;;
+const sname = &quot;Kitheka&quot;;
+console.log(`Hello ${fname} ${sname}`); // Output: Hello Dan Kitheka
+
+</div><section class="chapter"><h3 id="explanation" data-toc="explanation">Explanation</h3><ul class="list _bullet" id="-s9epte_23"><li class="list__item" id="-s9epte_24"><p>Template literals use backticks (<code class="code" id="-s9epte_26">`</code>) instead of quotes.</p></li><li class="list__item" id="-s9epte_25"><p>Expressions and variables inside <code class="code" id="-s9epte_27">${}</code> are evaluated and interpolated directly into the string.</p></li></ul></section><section class="chapter"><h3 id="multi-line-strings" data-toc="multi-line-strings">Multi-Line Strings</h3><ul class="list _bullet" id="-s9epte_28"><li class="list__item" id="-s9epte_30"><p>Template literals make it straightforward to create multi-line strings without needing to use escape characters or concatenation.</p></li></ul><section class="chapter"><h4 id="example" data-toc="example">Example:</h4><div class="code-block" data-lang="javascript">
+const message = `Hello,
+This is a multi-line string
+using template literals.`;
+console.log(message);
+
+</div><div class="code-block" data-lang="javascript">
+const message = `Hello,
+This is a multi-line string
+using template literals.`;
+console.log(message);
+
+[//]: # (Hello,)
+
+[//]: # (This is a multi-line string)
+
+[//]: # (using template literals.)
+
+</div></section></section><section class="chapter"><h3 id="string-interpolation" data-toc="string-interpolation">String Interpolation</h3><ul class="list _bullet" id="-s9epte_33"><li class="list__item" id="-s9epte_35"><p>You can embed expressions and variables inside template literals, allowing for dynamic string creation.</p></li></ul><section class="chapter"><h4 id="example" data-toc="example">Example:</h4><div class="code-block" data-lang="javascript">
+const price = 19.99;
+const discount = 0.2;
+const finalPrice = `The final price after discount is $${price - (price * discount)}`;
+console.log(finalPrice); // Output: The final price after discount is $15.99
+
+</div></section></section><section class="chapter"><h3 id="tagged-templates" data-toc="tagged-templates">Tagged Templates</h3><ul class="list _bullet" id="-s9epte_37"><li class="list__item" id="-s9epte_39"><p>Tagged templates allow you to parse template literals with a function. This feature is useful for custom string processing or building complex string structures.</p></li></ul><section class="chapter"><h4 id="example" data-toc="example">Example:</h4><div class="code-block" data-lang="javascript">
+function highlight(strings, ...values) {
+    return strings.reduce((result, string, i) =&gt; 
+        `${result}&lt;strong&gt;${values[i - 1]}&lt;/strong&gt;${string}`
+    );
+}
+
+const name = &quot;Dan&quot;;
+const age = 30;
+const message = highlight`Name: ${name}, Age: ${age}`;
+console.log(message); // Output: Name: &lt;strong&gt;Dan&lt;/strong&gt;, Age: &lt;strong&gt;30&lt;/strong&gt;
+
+</div></section></section><section class="chapter"><h3 id="explanation" data-toc="explanation">Explanation</h3><ul class="list _bullet" id="-s9epte_41"><li class="list__item" id="-s9epte_42"><p><code class="code" id="-s9epte_43">highlight</code> is a tag function that processes the template literal and returns a new string.</p></li></ul></section><section class="chapter"><h3 id="using-template-literals-in-html" data-toc="using-template-literals-in-html">Using Template Literals in HTML</h3><ul class="list _bullet" id="-s9epte_44"><li class="list__item" id="-s9epte_46"><p>Template literals are particularly useful for dynamically generating HTML content.</p></li></ul><section class="chapter"><h4 id="example" data-toc="example">Example:</h4><div class="code-block" data-lang="javascript">
+const people = [
+  { name: &quot;Alberto&quot;, age: 27 },
+  { name: &quot;Maria&quot;, age: 30 },
+  { name: &quot;John&quot;, age: 25 }
+];
+
+const markup = `
+&lt;ul&gt;
+    ${people.map(person =&gt; `&lt;li&gt;${person.name}, Age: ${person.age}&lt;/li&gt;`).join('')}
+&lt;/ul&gt;
+`;
+
+console.log(markup);
+// Output:
+// &lt;ul&gt;
+//     &lt;li&gt;Alberto, Age: 27&lt;/li&gt;
+//     &lt;li&gt;Maria, Age: 30&lt;/li&gt;
+//     &lt;li&gt;John, Age: 25&lt;/li&gt;
+// &lt;/ul&gt;
+
+</div></section></section><section class="chapter"><h3 id="explanation" data-toc="explanation">Explanation</h3><ul class="list _bullet" id="-s9epte_48"><li class="list__item" id="-s9epte_49"><p><code class="code" id="-s9epte_51">people.map(person =&gt; &lt;li&gt;${person.name}, Age: ${person.age}&lt;/li&gt;)</code> generates a list item for each person.</p></li><li class="list__item" id="-s9epte_50"><p><code class="code" id="-s9epte_52">.join('')</code> is used to concatenate the list items into a single string.</p></li></ul></section><section class="chapter"><h3 id="conditional-expressions" data-toc="conditional-expressions">Conditional Expressions</h3><ul class="list _bullet" id="-s9epte_53"><li class="list__item" id="-s9epte_55"><p>Template literals can also be used for conditional expressions within the string.</p></li></ul><section class="chapter"><h4 id="example" data-toc="example">Example:</h4><div class="code-block" data-lang="javascript">
+const isDiscounted = false;
+const getPrice = () =&gt; isDiscounted ? `Discounted price: $10` : `Regular price: $20`;
+console.log(getPrice()); // Output: Regular price: $20
+
+</div></section></section><section class="chapter"><h3 id="explanation" data-toc="explanation">Explanation</h3><ul class="list _bullet" id="-s9epte_57"><li class="list__item" id="-s9epte_58"><p>The ternary operator is used inside the template literal to choose between two different strings based on the <code class="code" id="-s9epte_59">isDiscounted</code> condition.</p></li></ul></section><section class="chapter"><h3 id="template-literals-with-react-jsx" data-toc="template-literals-with-react-jsx">Template Literals with React (JSX)</h3><ul class="list _bullet" id="-s9epte_60"><li class="list__item" id="-s9epte_62"><p>In frameworks like React, template literals are useful for embedding dynamic content in JSX.</p></li></ul><section class="chapter"><h4 id="example" data-toc="example">Example:</h4><div class="code-block" data-lang="javascript">
+const isAdmin = true;
+
+function renderPage() {
+    return isAdmin ? `&lt;div&gt;Page for Admin&lt;/div&gt;` : `&lt;div&gt;Page Not Allowed&lt;/div&gt;`;
+}
+
+console.log(renderPage()); // Output: &lt;div&gt;Page for Admin&lt;/div&gt;
+
+</div></section></section><section class="chapter"><h3 id="explanation" data-toc="explanation">Explanation:</h3><ul class="list _bullet" id="-s9epte_64"><li class="list__item" id="-s9epte_65"><p>The isAdmin variable determines which content is returned as a string.</p></li></ul></section></section><div class="last-modified">Last modified: 27 August 2024</div><div data-feedback-placeholder="true"></div><div class="navigation-links _bottom"><a href="let-vs-const.html" class="navigation-links__prev">Let-vs-Const</a><a href="arrow-functions.html" class="navigation-links__next">Arrow Functions</a></div></article><div id="disqus_thread"></div></div></section></main></div><script src="https://resources.jetbrains.com/writerside/apidoc/6.10.0-b408/app.js"></script></body></html>

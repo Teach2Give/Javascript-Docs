@@ -1,0 +1,79 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US" data-preset="contrast" data-primary-color="#307FFF"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="robots" content="noindex"><meta name="built-on" content="2024-08-27T10:57:06.9005131"><title>Let-vs-Const | Help Instance</title><script type="application/json" id="virtual-toc-data">[{"id":"variable-declarations-let-and-const","level":0,"title":"Variable Declarations: let and const","anchor":"#variable-declarations-let-and-const"},{"id":"example-2","level":0,"title":"Example 2","anchor":"#example-2"},{"id":"example-with-block-scope","level":0,"title":"Example with Block Scope","anchor":"#example-with-block-scope"}]</script><script type="application/json" id="topic-shortcuts"></script><link href="https://resources.jetbrains.com/writerside/apidoc/6.10.0-b408/app.css" rel="stylesheet"><meta name="msapplication-TileColor" content="#000000"><link rel="apple-touch-icon" sizes="180x180" href="https://jetbrains.com/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="https://jetbrains.com/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="https://jetbrains.com/favicon-16x16.png"><meta name="msapplication-TileImage" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-144x144.png"><meta name="msapplication-square70x70logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-70x70.png"><meta name="msapplication-square150x150logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-150x150.png"><meta name="msapplication-wide310x150logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-310x150.png"><meta name="msapplication-square310x310logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-310x310.png"><meta name="image" content=""><!-- Open Graph --><meta property="og:title" content="Let-vs-Const | Help Instance"><meta property="og:description" content=""><meta property="og:image" content=""><meta property="og:site_name" content="Help Instance Help"><meta property="og:type" content="website"><meta property="og:locale" content="en_US"><meta property="og:url" content="writerside-documentation/let-vs-const.html"><!-- End Open Graph --><!-- Twitter Card --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content=""><meta name="twitter:title" content="Let-vs-Const | Help Instance"><meta name="twitter:description" content=""><meta name="twitter:creator" content=""><meta name="twitter:image:src" content=""><!-- End Twitter Card --><!-- Schema.org WebPage --><script type="application/ld+json">{
+    "@context": "http://schema.org",
+    "@type": "WebPage",
+    "@id": "writerside-documentation/let-vs-const.html#webpage",
+    "url": "writerside-documentation/let-vs-const.html",
+    "name": "Let-vs-Const | Help Instance",
+    "description": "",
+    "image": "",
+    "inLanguage":"en-US"
+}</script><!-- End Schema.org --><!-- Schema.org WebSite --><script type="application/ld+json">{
+    "@type": "WebSite",
+    "@id": "writerside-documentation/#website",
+    "url": "writerside-documentation/",
+    "name": "Help Instance Help"
+}</script><!-- End Schema.org --></head><body data-id="Let-vs-Const" data-main-title="Let-vs-Const" data-article-props="{&quot;seeAlsoStyle&quot;:&quot;links&quot;}" data-template="article" data-breadcrumbs="Introduction.md|Javascript Documentation///ES6.md|Introduction to ES6 (ECMAScript 2015)"><div class="wrapper"><main class="panel _main"><header class="panel__header"><div class="container"><h3>Help Instance  Help</h3><div class="panel-trigger"></div></div></header><section class="panel__content"><div class="container"><article class="article" data-shortcut-switcher="inactive"><h1 data-toc="Let-vs-Const" id="Let-vs-Const.md">Let-vs-Const</h1><section class="chapter"><h2 id="variable-declarations-let-and-const" data-toc="variable-declarations-let-and-const">Variable Declarations: <code class="code" id="sc4m3k_11">let</code> and <code class="code" id="sc4m3k_12">const</code></h2><p id="sc4m3k_7">In JavaScript, <code class="code" id="sc4m3k_13">let</code> and <code class="code" id="sc4m3k_14">const</code> are used to declare variables. They are part of the ES6 (ECMAScript 2015) specification and offer block-scoping, which provides better control over variable scope compared to <code class="code" id="sc4m3k_15">var</code>.</p><section class="chapter"><h3 id="let" data-toc="let"><code class="code" id="sc4m3k_19">let</code></h3><ul class="list _bullet" id="sc4m3k_17"><li class="list__item" id="sc4m3k_20"><p><span class="control" id="sc4m3k_22">Block-Scoped</span>: Variables declared with <code class="code" id="sc4m3k_23">let</code> are limited to the block (enclosed by <code class="code" id="sc4m3k_24">{}</code>) in which they are defined. This prevents variables from leaking out of their intended scope.</p></li><li class="list__item" id="sc4m3k_21"><p><span class="control" id="sc4m3k_25">Reassignable</span>: Variables declared with <code class="code" id="sc4m3k_26">let</code> can be reassigned new values.</p></li></ul><section class="chapter"><h4 id="example" data-toc="example">Example:</h4><div class="code-block" data-lang="javascript">
+function example() {
+  if (true) {
+    let x = 10;
+    console.log(x); // 10
+  }
+  console.log(x); // ReferenceError: x is not defined
+}
+
+example();
+</div></section></section><section class="chapter"><h3 id="explanation" data-toc="explanation">Explanation</h3><ul class="list _bullet" id="sc4m3k_28"><li class="list__item" id="sc4m3k_29"><p>The <code class="code" id="sc4m3k_32">let x = 10;</code> is in the global scope.</p></li><li class="list__item" id="sc4m3k_30"><p>Inside the <code class="code" id="sc4m3k_33">if</code> block, a new <code class="code" id="sc4m3k_34">let x</code> is declared, which shadows the outer <code class="code" id="sc4m3k_35">x</code>.</p></li><li class="list__item" id="sc4m3k_31"><p>The inner <code class="code" id="sc4m3k_36">x</code> is <code class="code" id="sc4m3k_37">20</code>, while the outer <code class="code" id="sc4m3k_38">x</code> remains <code class="code" id="sc4m3k_39">10</code>.</p></li></ul></section><section class="chapter"><h3 id="const" data-toc="const"><code class="code" id="sc4m3k_43">const</code></h3><ul class="list _bullet" id="sc4m3k_41"><li class="list__item" id="sc4m3k_44"><p><span class="control" id="sc4m3k_46">Block-Scoped</span>: Like <code class="code" id="sc4m3k_47">let</code>, <code class="code" id="sc4m3k_48">const</code> is also block-scoped.</p></li><li class="list__item" id="sc4m3k_45"><p><span class="control" id="sc4m3k_49">Immutable Binding</span>: Once a variable is assigned with <code class="code" id="sc4m3k_50">const</code>, it cannot be reassigned. However, this does not make the value itself immutable if it&rsquo;s an object or an array; only the binding to that value is immutable.</p></li></ul><section class="chapter"><h4 id="example" data-toc="example">Example:</h4><div class="code-block" data-lang="javascript">
+const y = 20;
+console.log(y); // 20
+
+// Reassigning will cause an error
+// y = 30; // TypeError: Assignment to constant variable
+
+const obj = { key: 'value' };
+obj.key = 'newValue'; // Allowed
+console.log(obj.key); // 'newValue'
+</div></section></section></section><section class="chapter"><h2 id="example-2" data-toc="example-2">Example 2</h2><div class="code-block" data-lang="javascript">
+const z = 10; // Global scope
+
+if (z === 10) {
+    const z = 20; // Block scope (inside the if block)
+    console.log(z); // 20
+}
+
+console.log(z); // 10
+
+</div><section class="chapter"><h3 id="explanation" data-toc="explanation">Explanation</h3><ul class="list _bullet" id="sc4m3k_57"><li class="list__item" id="sc4m3k_58"><p>The <code class="code" id="sc4m3k_61">const z = 10;</code> is in the global scope.</p></li><li class="list__item" id="sc4m3k_59"><p>Inside the <code class="code" id="sc4m3k_62">if</code> block, a new <code class="code" id="sc4m3k_63">const z</code> is declared, which shadows the outer <code class="code" id="sc4m3k_64">z</code>.</p></li><li class="list__item" id="sc4m3k_60"><p>The inner <code class="code" id="sc4m3k_65">z</code> is <code class="code" id="sc4m3k_66">20</code>, while the outer <code class="code" id="sc4m3k_67">z</code> remains <code class="code" id="sc4m3k_68">10</code>.</p></li></ul></section><section class="chapter"><h3 id="var-for-comparison" data-toc="var-for-comparison"><code class="code" id="sc4m3k_72">var</code> (for Comparison)</h3><ul class="list _bullet" id="sc4m3k_70"><li class="list__item" id="sc4m3k_73"><p><span class="control" id="sc4m3k_75">Function-Scoped</span>: Variables declared with <code class="code" id="sc4m3k_76">var</code> are scoped to the function in which they are defined, or global if defined outside any function.</p></li><li class="list__item" id="sc4m3k_74"><p><span class="control" id="sc4m3k_77">Hoisting</span>: <code class="code" id="sc4m3k_78">var</code> declarations are hoisted to the top of their scope, but the initialization stays in place.</p></li></ul><section class="chapter"><h4 id="example" data-toc="example">Example:</h4><div class="code-block" data-lang="javascript">
+var y = 10; // Global scope
+
+if (y === 10) {
+    var y = 20; // Function or global scope (not block scoped)
+    console.log(y); // 20
+}
+
+console.log(`The value at y is now: ${y}`); // 20
+
+</div></section></section><section class="chapter"><h3 id="explanation" data-toc="explanation">Explanation</h3><ul class="list _bullet" id="sc4m3k_80"><li class="list__item" id="sc4m3k_81"><p>The <code class="code" id="sc4m3k_83">var y = 10;</code> is in the global scope.</p></li><li class="list__item" id="sc4m3k_82"><p>The <code class="code" id="sc4m3k_84">var y = 20;</code> inside the <code class="code" id="sc4m3k_85">if</code> block affects the global <code class="code" id="sc4m3k_86">y</code>, leading to <code class="code" id="sc4m3k_87">y</code> being <code class="code" id="sc4m3k_88">20</code> everywhere.</p></li></ul></section><section class="chapter"><h3 id="scope-in-functions" data-toc="scope-in-functions">Scope in Functions</h3><ul class="list _bullet" id="sc4m3k_89"><li class="list__item" id="sc4m3k_91"><p>Variables declared with <code class="code" id="sc4m3k_92">let</code> and <code class="code" id="sc4m3k_93">const</code> are block-scoped, while <code class="code" id="sc4m3k_94">var</code> is function-scoped.</p></li></ul><section class="chapter"><h4 id="example-with-function-scope" data-toc="example-with-function-scope">Example with Function Scope:</h4><div class="code-block" data-lang="javascript">
+var length = 12; // Global variable
+
+function area() {
+    return length * length; // Uses global length
+}
+
+console.log(area()); // 144
+
+</div></section></section></section><section class="chapter"><h2 id="example-with-block-scope" data-toc="example-with-block-scope">Example with Block Scope</h2><div class="code-block" data-lang="javascript">
+### Explanation
+
+- In the `area` function, the global `length` variable is used.
+- In the `parameter` function, `length` and `width` are local to the function, so they do not affect the global `length`.
+
+### Key Points to Remember
+
+- **Block Scope**: `let` and `const` provide block-level scope, making them more predictable and avoiding issues related to variable hoisting and scoping found with `var`.
+- **Reassignability**:
+  - **`let`**: Variables declared with `let` can be reassigned.
+  - **`const`**: Variables declared with `const` cannot be reassigned. However, if the value is an object or array, its contents can still be modified.
+- **Function Scope vs. Block Scope**: `var` is function-scoped, while `let` and `const` are block-scoped.
+
+</div><section class="chapter"><h3 id="explanation" data-toc="explanation">Explanation</h3><ul class="list _bullet" id="sc4m3k_99"><li class="list__item" id="sc4m3k_100"><p>In the <code class="code" id="sc4m3k_102">area</code> function, the global <code class="code" id="sc4m3k_103">length</code> variable is used.</p></li><li class="list__item" id="sc4m3k_101"><p>In the <code class="code" id="sc4m3k_104">parameter</code> function, <code class="code" id="sc4m3k_105">length</code> and <code class="code" id="sc4m3k_106">width</code> are local to the function, so they do not affect the global <code class="code" id="sc4m3k_107">length</code>.</p></li></ul></section><section class="chapter"><h3 id="key-points-to-remember" data-toc="key-points-to-remember">Key Points to Remember</h3><ul class="list _bullet" id="sc4m3k_108"><li class="list__item" id="sc4m3k_109"><p><span class="control" id="sc4m3k_112">Block Scope</span>: <code class="code" id="sc4m3k_113">let</code> and <code class="code" id="sc4m3k_114">const</code> provide block-level scope, making them more predictable and avoiding issues related to variable hoisting and scoping found with <code class="code" id="sc4m3k_115">var</code>.</p></li><li class="list__item" id="sc4m3k_110"><p><span class="control" id="sc4m3k_116">Reassignability</span>: </p><ul class="list _bullet" id="sc4m3k_117"><li class="list__item" id="sc4m3k_118"><p><span class="control" id="sc4m3k_120"><code class="code" id="sc4m3k_122">let</code></span>: Variables declared with <code class="code" id="sc4m3k_121">let</code> can be reassigned.</p></li><li class="list__item" id="sc4m3k_119"><p><span class="control" id="sc4m3k_123"><code class="code" id="sc4m3k_125">const</code></span>: Variables declared with <code class="code" id="sc4m3k_124">const</code> cannot be reassigned. However, if the value is an object or array, its contents can still be modified.</p></li></ul></li><li class="list__item" id="sc4m3k_111"><p><span class="control" id="sc4m3k_126">Function Scope vs. Block Scope</span>: <code class="code" id="sc4m3k_127">var</code> is function-scoped, while <code class="code" id="sc4m3k_128">let</code> and <code class="code" id="sc4m3k_129">const</code> are block-scoped.</p></li></ul></section></section><div class="last-modified">Last modified: 27 August 2024</div><div data-feedback-placeholder="true"></div><div class="navigation-links _bottom"><a href="es6.html" class="navigation-links__prev">Introduction to ES6 (ECMAScript 2015)</a><a href="template-literals.html" class="navigation-links__next">Template Literals</a></div></article><div id="disqus_thread"></div></div></section></main></div><script src="https://resources.jetbrains.com/writerside/apidoc/6.10.0-b408/app.js"></script></body></html>

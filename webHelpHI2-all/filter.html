@@ -1,0 +1,67 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US" data-preset="contrast" data-primary-color="#307FFF"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="robots" content="noindex"><meta name="built-on" content="2024-08-27T10:57:06.9216859"><title>JavaScript `filter` Method | Help Instance</title><script type="application/json" id="virtual-toc-data">[{"id":"overview","level":0,"title":"Overview","anchor":"#overview"}]</script><script type="application/json" id="topic-shortcuts"></script><link href="https://resources.jetbrains.com/writerside/apidoc/6.10.0-b408/app.css" rel="stylesheet"><meta name="msapplication-TileColor" content="#000000"><link rel="apple-touch-icon" sizes="180x180" href="https://jetbrains.com/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="https://jetbrains.com/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="https://jetbrains.com/favicon-16x16.png"><meta name="msapplication-TileImage" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-144x144.png"><meta name="msapplication-square70x70logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-70x70.png"><meta name="msapplication-square150x150logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-150x150.png"><meta name="msapplication-wide310x150logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-310x150.png"><meta name="msapplication-square310x310logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-310x310.png"><meta name="image" content=""><!-- Open Graph --><meta property="og:title" content="JavaScript `filter` Method | Help Instance"><meta property="og:description" content=""><meta property="og:image" content=""><meta property="og:site_name" content="Help Instance Help"><meta property="og:type" content="website"><meta property="og:locale" content="en_US"><meta property="og:url" content="writerside-documentation/filter.html"><!-- End Open Graph --><!-- Twitter Card --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content=""><meta name="twitter:title" content="JavaScript `filter` Method | Help Instance"><meta name="twitter:description" content=""><meta name="twitter:creator" content=""><meta name="twitter:image:src" content=""><!-- End Twitter Card --><!-- Schema.org WebPage --><script type="application/ld+json">{
+    "@context": "http://schema.org",
+    "@type": "WebPage",
+    "@id": "writerside-documentation/filter.html#webpage",
+    "url": "writerside-documentation/filter.html",
+    "name": "JavaScript `filter` Method | Help Instance",
+    "description": "",
+    "image": "",
+    "inLanguage":"en-US"
+}</script><!-- End Schema.org --><!-- Schema.org WebSite --><script type="application/ld+json">{
+    "@type": "WebSite",
+    "@id": "writerside-documentation/#website",
+    "url": "writerside-documentation/",
+    "name": "Help Instance Help"
+}</script><!-- End Schema.org --></head><body data-id="filter" data-main-title="JavaScript `filter` Method" data-article-props="{&quot;seeAlsoStyle&quot;:&quot;links&quot;}" data-template="article" data-breadcrumbs="Introduction.md|Javascript Documentation///Arrays.md|Arrays"><div class="wrapper"><main class="panel _main"><header class="panel__header"><div class="container"><h3>Help Instance  Help</h3><div class="panel-trigger"></div></div></header><section class="panel__content"><div class="container"><article class="article" data-shortcut-switcher="inactive"><h1 data-toc="filter" id="filter.md">JavaScript `filter` Method</h1><section class="chapter"><h2 id="overview" data-toc="overview">Overview</h2><p id="suvq6l_5">The <code class="code" id="suvq6l_16">filter</code> method creates a new array with all elements that pass the test implemented by the provided function. It is commonly used to filter out items from an array based on specific criteria.</p><section class="chapter"><h3 id="syntax" data-toc="syntax">Syntax</h3><div class="code-block" data-lang="javascript">
+array.filter((element, index, array) =&gt; {
+  // Function body
+});
+
+array.filter(callbackfn, thisArg);
+
+</div></section><section class="chapter"><h3 id="callback-function" data-toc="callback-function">Callback Function</h3><ul class="list _bullet" id="suvq6l_18"><li class="list__item" id="suvq6l_20"><p><span class="control" id="suvq6l_21">callbackfn</span>: A function that will be executed on each element of the array.</p></li></ul><section class="chapter"><h4 id="parameters" data-toc="parameters">Parameters:</h4><ul class="list _bullet" id="suvq6l_22"><li class="list__item" id="suvq6l_23"><p><span class="control" id="suvq6l_27">value</span>: The current element being processed.</p></li><li class="list__item" id="suvq6l_24"><p><span class="control" id="suvq6l_28">index</span> (optional): The index of the current element.</p></li><li class="list__item" id="suvq6l_25"><p><span class="control" id="suvq6l_29">array</span> (optional): The array on which <code class="code" id="suvq6l_30">filter</code> was called.</p></li><li class="list__item" id="suvq6l_26"><p><span class="control" id="suvq6l_31">thisArg</span> (optional): Value to use as <code class="code" id="suvq6l_32">this</code> when executing <code class="code" id="suvq6l_33">callbackfn</code>.</p></li></ul></section></section><section class="chapter"><h3 id="key-characteristics" data-toc="key-characteristics">Key Characteristics</h3><ul class="list _bullet" id="suvq6l_34"><li class="list__item" id="suvq6l_35"><p><span class="control" id="suvq6l_38">Returns a New Array</span>: <code class="code" id="suvq6l_39">filter</code> returns a new array containing all elements that satisfy the condition specified in the callback function. The original array remains unchanged.</p></li><li class="list__item" id="suvq6l_36"><p><span class="control" id="suvq6l_40">Requires <code class="code" id="suvq6l_43">return</code></span>: The callback function must use the <code class="code" id="suvq6l_41">return</code> keyword to indicate whether an element should be included in the new array. Without <code class="code" id="suvq6l_42">return</code>, elements are not included.</p></li><li class="list__item" id="suvq6l_37"><p><span class="control" id="suvq6l_44">Immutability</span>: The <code class="code" id="suvq6l_45">filter</code> method does not alter the original array, ensuring that the original data remains unchanged.</p></li></ul></section><section class="chapter"><h3 id="examples" data-toc="examples">Examples</h3><ul class="list _bullet" id="suvq6l_46"><li class="list__item" id="suvq6l_48"><p><span class="control" id="suvq6l_49">Basic Example</span>: Filtering Based on Price</p></li></ul><div class="code-block" data-lang="javascript">
+const availableFoods = [
+    { id: &quot;qwe234dfh&quot;, name: &quot;Burger&quot;, image: &quot;🍔🍔&quot;, price: 234 },
+    { id: &quot;qwe2356dxh&quot;, name: &quot;Pizza&quot;, image: &quot;🍕🍕&quot;, price: 400 },
+    { id: &quot;qwe2456yh&quot;, name: &quot;Meat&quot;, image: &quot;🍖🍖&quot;, price: 500 },
+    { id: &quot;qwe2785yh&quot;, name: &quot;Chicken&quot;, image: &quot;🍗🍗&quot;, price: 1200 },
+];
+
+const filteredPrices = availableFoods.filter(function (filteredFoodObj) {
+    return filteredFoodObj.price &gt; 450;
+});
+
+console.log(filteredPrices);
+/*
+[
+    { id: 'qwe2456yh', name: 'Meat', image: '🍖🍖', price: 500 },
+    { id: 'qwe2785yh', name: 'Chicken', image: '🍗🍗', price: 1200 }
+]
+*/
+
+</div></section><section class="chapter"><h3 id="explanation" data-toc="explanation">Explanation</h3><ul class="list _bullet" id="suvq6l_50"><li class="list__item" id="suvq6l_51"><p><code class="code" id="suvq6l_54">availableFoods</code> is an array of food objects.</p></li><li class="list__item" id="suvq6l_52"><p><code class="code" id="suvq6l_55">filter</code> is used to create a new array containing only the food items with a price greater than 450.</p></li><li class="list__item" id="suvq6l_53"><p>The result is a new array with only the Meat and Chicken objects.</p></li></ul></section><section class="chapter"><h3 id="using-arrow-functions" data-toc="using-arrow-functions">Using Arrow Functions</h3><div class="code-block" data-lang="javascript">
+const filteredPrices2 = availableFoods.filter((filteredFoodObj) =&gt; {
+    return filteredFoodObj.price &gt; 450;
+});
+
+console.log(filteredPrices2);
+/*
+[
+    { id: 'qwe2456yh', name: 'Meat', image: '🍖🍖', price: 500 },
+    { id: 'qwe2785yh', name: 'Chicken', image: '🍗🍗', price: 1200 }
+]
+*/
+
+</div></section><section class="chapter"><h3 id="explanation" data-toc="explanation">Explanation</h3><ul class="list _bullet" id="suvq6l_57"><li class="list__item" id="suvq6l_58"><p>The same filtering operation is performed using an arrow function.</p></li><li class="list__item" id="suvq6l_59"><p>Arrow functions provide a more concise syntax for the callback function.</p></li><li class="list__item" id="suvq6l_60"><p>The result is the same as with the traditional function syntax.</p></li></ul></section><section class="chapter"><h3 id="using-implicit-return-in-arrow-functions" data-toc="using-implicit-return-in-arrow-functions">Using Implicit Return in Arrow Functions</h3><div class="code-block" data-lang="javascript">
+const filteredPrices3 = availableFoods.filter(filteredFoodObj =&gt; filteredFoodObj.price &gt; 450);
+
+console.log(filteredPrices3);
+/*
+[
+    { id: 'qwe2456yh', name: 'Meat', image: '🍖🍖', price: 500 },
+    { id: 'qwe2785yh', name: 'Chicken', image: '🍗🍗', price: 1200 }
+]
+*/
+
+</div></section><section class="chapter"><h3 id="explanation" data-toc="explanation">Explanation</h3><ul class="list _bullet" id="suvq6l_62"><li class="list__item" id="suvq6l_63"><p>In this version, the arrow function uses implicit return (no curly braces <code class="code" id="suvq6l_65">{}</code>), making the code more concise.</p></li><li class="list__item" id="suvq6l_64"><p>The result remains the same, and the <code class="code" id="suvq6l_66">price</code> property is filtered as before.</p></li></ul></section><section class="chapter"><h3 id="key-points-to-remember" data-toc="key-points-to-remember">Key Points to Remember</h3><ul class="list _bullet" id="suvq6l_67"><li class="list__item" id="suvq6l_68"><p><span class="control" id="suvq6l_73">Return Value</span>: Always use the <code class="code" id="suvq6l_74">return</code> keyword inside the callback function to specify whether an element should be included in the new array. Omitting <code class="code" id="suvq6l_75">return</code> will result in elements not being included.</p></li><li class="list__item" id="suvq6l_69"><p><span class="control" id="suvq6l_76">Callback Function</span>: Can be a named function, an anonymous function, or an arrow function. Arrow functions offer a more concise syntax.</p></li><li class="list__item" id="suvq6l_70"><p><span class="control" id="suvq6l_77">Chaining</span>: <code class="code" id="suvq6l_78">filter</code> can be chained with other array methods like <code class="code" id="suvq6l_79">map</code>, <code class="code" id="suvq6l_80">reduce</code>, and <code class="code" id="suvq6l_81">sort</code> for more complex operations.</p></li><li class="list__item" id="suvq6l_71"><p><span class="control" id="suvq6l_82">Performance</span>: <code class="code" id="suvq6l_83">filter</code> is suitable for selecting elements based on conditions but should be used with consideration for large arrays or performance-critical applications.</p></li><li class="list__item" id="suvq6l_72"><p><span class="control" id="suvq6l_84">Immutability</span>: The <code class="code" id="suvq6l_85">filter</code> method does not modify the original array, ensuring that the original data remains unchanged.</p></li></ul></section></section><div class="last-modified">Last modified: 27 August 2024</div><div data-feedback-placeholder="true"></div><div class="navigation-links _bottom"><a href="reduce.html" class="navigation-links__prev">JavaScript `reduce` Method</a><a href="es6.html" class="navigation-links__next">Introduction to ES6 (ECMAScript 2015)</a></div></article><div id="disqus_thread"></div></div></section></main></div><script src="https://resources.jetbrains.com/writerside/apidoc/6.10.0-b408/app.js"></script></body></html>

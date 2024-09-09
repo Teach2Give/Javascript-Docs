@@ -1,0 +1,109 @@
+<!DOCTYPE html SYSTEM "about:legacy-compat">
+<html lang="en-US" data-preset="contrast" data-primary-color="#307FFF"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta charset="UTF-8"><meta name="robots" content="noindex"><meta name="built-on" content="2024-08-27T10:57:06.9057005"><title>JavaScript Iterations | Help Instance</title><script type="application/json" id="virtual-toc-data">[{"id":"1-the-while-loop","level":0,"title":"1. The while Loop","anchor":"#1-the-while-loop"},{"id":"2-the-do-while-loop","level":0,"title":"2. The do...while Loop","anchor":"#2-the-do-while-loop"},{"id":"3-the-for-loop","level":0,"title":"3. The for Loop","anchor":"#3-the-for-loop"},{"id":"4-the-for-in-loop","level":0,"title":"4. The for...in Loop","anchor":"#4-the-for-in-loop"},{"id":"5-the-for-of-loop","level":0,"title":"5. The for...of Loop","anchor":"#5-the-for-of-loop"},{"id":"6-labeled-statements","level":0,"title":"6. Labeled Statements","anchor":"#6-labeled-statements"},{"id":"7-the-break-statement","level":0,"title":"7. The break Statement","anchor":"#7-the-break-statement"},{"id":"8-the-continue-statement","level":0,"title":"8. The continue Statement","anchor":"#8-the-continue-statement"},{"id":"best-practices-for-using-loops","level":0,"title":"Best Practices for Using Loops","anchor":"#best-practices-for-using-loops"},{"id":"common-mistakes-to-avoid","level":0,"title":"Common Mistakes to Avoid","anchor":"#common-mistakes-to-avoid"}]</script><script type="application/json" id="topic-shortcuts"></script><link href="https://resources.jetbrains.com/writerside/apidoc/6.10.0-b408/app.css" rel="stylesheet"><meta name="msapplication-TileColor" content="#000000"><link rel="apple-touch-icon" sizes="180x180" href="https://jetbrains.com/apple-touch-icon.png"><link rel="icon" type="image/png" sizes="32x32" href="https://jetbrains.com/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="https://jetbrains.com/favicon-16x16.png"><meta name="msapplication-TileImage" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-144x144.png"><meta name="msapplication-square70x70logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-70x70.png"><meta name="msapplication-square150x150logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-150x150.png"><meta name="msapplication-wide310x150logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-310x150.png"><meta name="msapplication-square310x310logo" content="https://resources.jetbrains.com/storage/ui/favicons/mstile-310x310.png"><meta name="image" content=""><!-- Open Graph --><meta property="og:title" content="JavaScript Iterations | Help Instance"><meta property="og:description" content=""><meta property="og:image" content=""><meta property="og:site_name" content="Help Instance Help"><meta property="og:type" content="website"><meta property="og:locale" content="en_US"><meta property="og:url" content="writerside-documentation/iterations-in-javascript.html"><!-- End Open Graph --><!-- Twitter Card --><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content=""><meta name="twitter:title" content="JavaScript Iterations | Help Instance"><meta name="twitter:description" content=""><meta name="twitter:creator" content=""><meta name="twitter:image:src" content=""><!-- End Twitter Card --><!-- Schema.org WebPage --><script type="application/ld+json">{
+    "@context": "http://schema.org",
+    "@type": "WebPage",
+    "@id": "writerside-documentation/iterations-in-javascript.html#webpage",
+    "url": "writerside-documentation/iterations-in-javascript.html",
+    "name": "JavaScript Iterations | Help Instance",
+    "description": "",
+    "image": "",
+    "inLanguage":"en-US"
+}</script><!-- End Schema.org --><!-- Schema.org WebSite --><script type="application/ld+json">{
+    "@type": "WebSite",
+    "@id": "writerside-documentation/#website",
+    "url": "writerside-documentation/",
+    "name": "Help Instance Help"
+}</script><!-- End Schema.org --></head><body data-id="Iterations-in-Javascript" data-main-title="JavaScript Iterations" data-article-props="{&quot;seeAlsoStyle&quot;:&quot;links&quot;}" data-template="article" data-breadcrumbs="Introduction.md|Javascript Documentation"><div class="wrapper"><main class="panel _main"><header class="panel__header"><div class="container"><h3>Help Instance  Help</h3><div class="panel-trigger"></div></div></header><section class="panel__content"><div class="container"><article class="article" data-shortcut-switcher="inactive"><h1 data-toc="Iterations-in-Javascript" id="Iterations-in-Javascript.md">JavaScript Iterations</h1><p id="j7u77r_3">Iteration in JavaScript refers to the process of repeatedly executing a block of code. JavaScript offers several types of loops to facilitate this, each suited to different use cases. Here, we'll explore the key types of loops, including their syntax and practical examples.</p><section class="chapter"><h2 id="1-the-while-loop" data-toc="1-the-while-loop">1. The <code class="code" id="j7u77r_17">while</code> Loop</h2><p id="j7u77r_15">The <code class="code" id="j7u77r_18">while</code> loop executes a block of code as long as a specified condition evaluates to <code class="code" id="j7u77r_19">true</code>. The syntax is:</p><div class="code-block" data-lang="javascript">
+while (condition) {
+  // code to be executed
+}
+
+let x = 0;
+while (x &lt; 10) {
+  console.log(x); // Outputs numbers from 0 to 9
+  x++;
+}
+console.log(&quot;The program has been stopped&quot;); // Executes after x is no longer less than 10
+</div></section><section class="chapter"><h2 id="2-the-do-while-loop" data-toc="2-the-do-while-loop">2. The do...while Loop</h2><p id="j7u77r_20">The do...while loop is similar to the while loop, but it guarantees that the code block is executed at least once before the condition is tested. The syntax is:</p><div class="code-block" data-lang="javascript">
+do {
+  // code to be executed
+} while (condition);
+
+let actualPassword = &quot;pa$$w0rd&quot;;
+let myInputPassword;
+do {
+  let passwordInputValue = prompt(&quot;Enter a password&quot;);
+  myInputPassword = passwordInputValue;
+} while (myInputPassword !== actualPassword);
+alert(&quot;Correct password&quot;);
+</div></section><section class="chapter"><h2 id="3-the-for-loop" data-toc="3-the-for-loop">3. The for Loop</h2><p id="j7u77r_22">The for loop is used when you know in advance how many times you want to execute a block of code. The syntax is:</p><div class="code-block" data-lang="javascript">
+for (initialization; condition; increment) {
+  // code to be executed
+}
+
+const marks = [12, 34, 45, 56, 78, 79];
+console.log('The length of the array is ', marks.length);
+
+for (let index = 0; index &lt; marks.length; index++) {
+  console.log(marks[index]); // Outputs all values in the marks array
+  if (index &gt;= 5) {
+    console.log('The program will break if index is greater or equal to 5');
+    break; // Exits the loop if index is 5 or more
+  }
+}
+
+</div></section><section class="chapter"><h2 id="4-the-for-in-loop" data-toc="4-the-for-in-loop">4. The for...in Loop</h2><p id="j7u77r_24">The for...in loop is used to iterate over the enumerable properties of an object. The syntax is:</p><div class="code-block" data-lang="javascript">
+for (variable in object) {
+  // code to be executed
+}
+
+const person = {
+  name: &quot;GUVI&quot;,
+  age: 10,
+  city: &quot;Chennai, Tamil Nadu&quot;
+};
+
+for (let key in person) {
+  console.log(`${key}: ${person[key]}`);
+}
+
+</div></section><section class="chapter"><h2 id="5-the-for-of-loop" data-toc="5-the-for-of-loop">5. The for...of Loop</h2><p id="j7u77r_26">The for...of loop is used to iterate over iterable objects such as arrays, strings, and other built-in iterable objects. The syntax is:</p><div class="code-block" data-lang="javascript">
+for (variable of iterable) {
+  // code to be executed
+}
+
+const languages = [&quot;JavaScript&quot;, &quot;Python&quot;, &quot;HTML&quot;];
+
+for (let lang of languages) {
+  console.log(lang); // Outputs each language in the array
+}
+
+</div></section><section class="chapter"><h2 id="6-labeled-statements" data-toc="6-labeled-statements">6. Labeled Statements</h2><p id="j7u77r_28">Labeled statements provide a way to label a loop or a block of code, allowing you to break or continue out of multiple nested loops. The syntax is:</p><div class="code-block" data-lang="javascript">
+label: statement
+
+outerLoop: for (let i = 0; i &lt; 5; i++) {
+  innerLoop: for (let j = 0; j &lt; 5; j++) {
+    if (i === 2 &amp;&amp; j === 2) {
+      break outerLoop; // Breaks out of the outer loop
+    }
+    console.log(`i = ${i}, j = ${j}`);
+  }
+}
+
+</div></section><section class="chapter"><h2 id="7-the-break-statement" data-toc="7-the-break-statement">7. The break Statement</h2><p id="j7u77r_30">The break statement exits a loop or switch statement prematurely. It is used when you need to stop the execution of the loop before the condition is false.</p><div class="code-block" data-lang="javascript">
+for (let i = 0; i &lt; 7; i++) {
+  if (i === 5) {
+    break; // Exits the loop when i is 5
+  }
+  console.log(i); // Outputs values from 0 to 4
+}
+
+</div></section><section class="chapter"><h2 id="8-the-continue-statement" data-toc="8-the-continue-statement">8. The continue Statement</h2><p id="j7u77r_32">The continue statement skips the current iteration of a loop and proceeds to the next iteration. It does not terminate the loop but skips the remaining code for the current iteration.</p><div class="code-block" data-lang="javascript">
+for (let i = 0; i &lt; 10; i++) {
+  if (i === 9) {
+    continue; // Skips the iteration when i is 9
+  }
+  console.log(i); // Outputs values from 0 to 8
+}
+
+</div></section><section class="chapter"><h2 id="best-practices-for-using-loops" data-toc="best-practices-for-using-loops">Best Practices for Using Loops</h2><ul class="list _bullet" id="j7u77r_34"><li class="list__item" id="j7u77r_35"><p>Use Meaningful Variable Names: Choose variable names that clearly describe their purpose.</p></li><li class="list__item" id="j7u77r_36"><p>Initialize Variables Outside the Loop: Avoid unnecessary reinitialization inside the loop.</p></li><li class="list__item" id="j7u77r_37"><p>Choose the Right Loop: Use the loop that best fits the problem (e.g., for for known iterations, while for unknown).</p></li><li class="list__item" id="j7u77r_38"><p>Avoid Infinite Loops: Ensure loops have an appropriate exit condition.</p></li><li class="list__item" id="j7u77r_39"><p>Minimize Code Inside Loops: Keep the code inside loops concise and move complex operations outside if possible.</p></li><li class="list__item" id="j7u77r_40"><p>Use break and continue Judiciously: Use them sparingly to avoid reducing code readability.</p></li></ul></section><section class="chapter"><h2 id="common-mistakes-to-avoid" data-toc="common-mistakes-to-avoid">Common Mistakes to Avoid</h2><ul class="list _bullet" id="j7u77r_41"><li class="list__item" id="j7u77r_42"><p>Forgetting to Update Loop Control Variables: This can cause infinite loops or incorrect results.</p></li><li class="list__item" id="j7u77r_43"><p>Using the Wrong Loop Type: This can lead to unnecessary complexity or inefficiency.</p></li><li class="list__item" id="j7u77r_44"><p>Modifying Iterable Objects in for...of Loops: This can lead to unexpected behavior.</p></li><li class="list__item" id="j7u77r_45"><p>Not Using Curly Braces for Single-Line Blocks: Always use curly braces to avoid ambiguity.</p></li><li class="list__item" id="j7u77r_46"><p>Not Initializing Loop Control Variables: Always initialize before using them in a loop.</p></li></ul></section><div class="last-modified">Last modified: 27 August 2024</div><div data-feedback-placeholder="true"></div><div class="navigation-links _bottom"><a href="math-operators.html" class="navigation-links__prev">Math Operators</a><a href="dates.html" class="navigation-links__next">JavaScript Date and Time</a></div></article><div id="disqus_thread"></div></div></section></main></div><script src="https://resources.jetbrains.com/writerside/apidoc/6.10.0-b408/app.js"></script></body></html>
