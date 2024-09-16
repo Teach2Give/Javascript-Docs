@@ -3,6 +3,10 @@
 Arrays in JavaScript are versatile and widely used to store and manipulate ordered collections of values. Here's a summary of key concepts and methods related to JavaScript arrays:
 
 ## Arrays Overview
+
+Accessing array indicies const mark = [13, 45, 56, 78, 90];
+![image_3.png](image_3.png)
+
 Passed by Reference: Arrays in JavaScript are passed by reference, not by value. This means that when you assign an array to a new variable, both variables point to the same array in memory. Changes to one variable will affect the other.
 
 ```Javascript

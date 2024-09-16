@@ -27,6 +27,8 @@
             <toc-element topic="maps.md"/>
             <toc-element topic="Sets.md"/>
         </toc-element>
+        <toc-element topic="Javascript-Functions.md"/>
+        <toc-element topic="Understanding-the-Event-Loop-Task-Queue-and-Microtask-Queue-in-JavaScript.md"/>
         <toc-element topic="Arrays.md">
             <toc-element topic="for-each.md"/>
             <toc-element topic="map.md"/>
