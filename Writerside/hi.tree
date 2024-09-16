@@ -45,6 +45,10 @@
         </toc-element>
         <toc-element topic="Asynchrnous-Javascript.md">
             <toc-element topic="Promises.md"/>
+            <toc-element topic="callbacks.md"/>
+            <toc-element topic="Promise.md"/>
+            <toc-element topic="Async-Await.md"/>
+            <toc-element topic="Solving-Sequential-Eecution-with-Promise-all.md"/>
         </toc-element>
     </toc-element>
 </instance-profile>
